@@ -1,0 +1,13 @@
+#!/bin/bash
+set -e
+
+if [[ "$HOSTNAME" == "notchpeak"* ]]; then
+  CLUSTER="np"
+elif [[ "$HOSTNAME" == "kingspeak"* ]]; then
+  CLUSTER="kp"
+else
+  echo "Unable to determine cluster from hostname: $HOSTNAME" > /dev/stderr
+  exit 1
+fi
+
+echo $CLUSTER
