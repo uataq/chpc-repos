@@ -66,13 +66,14 @@ while true; do
     esac
 done
 
-
 source $(dirname $BASH_SOURCE)/scripts/config.sh
 
 echo "
 # Source lin-group environment configuration
-source $CONFIG_FILENAME
-" >> $USER_CUSTOM_SH
+if [ -f "$CONFIG_FILENAME" ]; then
+    source $CONFIG_FILENAME
+fi
+" >>$USER_CUSTOM_SH
 
 echo
 echo "Configuration complete! Log out and back in for changes to take effect."
