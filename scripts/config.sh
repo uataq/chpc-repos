@@ -26,4 +26,5 @@ export LDFLAGS="-L${LIB} $LDFLAGS"
 export LD_LIBRARY_PATH="${LIB}:$LD_LIBRARY_PATH"
 export PKG_CONFIG_PATH="${PKGCONFIG}:$PKG_CONFIG_PATH"
 export PROJ_LIB="${SHARE}/proj"
+export TMPDIR="/scratch/local/${USER}/${SLURM_JOB_ID}"
 
