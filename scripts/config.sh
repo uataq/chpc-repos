@@ -28,3 +28,5 @@ export PKG_CONFIG_PATH="${PKGCONFIG}:$PKG_CONFIG_PATH"
 export PROJ_LIB="${SHARE}/proj"
 export TMPDIR="/scratch/local/${USER}/${SLURM_JOB_ID}"
 
+mkdir -p $TMPDIR
+
